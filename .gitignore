@@ -1,10 +1,34 @@
+# ignore everything not whitelisted
 /*
+
+# whitelist files
 !/.gitignore
-!/.zprofile
-!/.xprofile
-!/.gtkrc-2.0
-!/LICENSE
 !/README.md
-!/.local/bin/*
-!/.config/*
+!/LICENSE
+!/.zprofile
+!/xprofile
+!/gtkrc-2.0
 !/.gitmodules
+
+# whitelist all of config
+!/.config
+!/.config/*
+
+# whitelist /.local and blacklist it's contents
+!/.local
+/.local/*
+
+# whitelist /.local/bin except pycache
+!/.local/bin
+!/.local/bin/*
+/.local/bin/__pycache__/
+
+# blacklist all of /.local/share except needed files
+!/.local/share
+/.local/share/*
+!/.local/share/applications
+!/.local/share/applications/*
+!/.local/share/larbs
+!/.local/share/larbs/*
+!/.local/share/bg
+!/.local/share/escher_robot.jpg
