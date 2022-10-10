@@ -1,0 +1,10 @@
+/*
+!/.gitignore
+!/.zprofile
+!/.xprofile
+!/.gtkrc-2.0
+!/LICENSE
+!/README.md
+!/.local/bin/*
+!/.config/*
+!/.gitmodules
