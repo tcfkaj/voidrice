@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# A rewrite of passmenu for my workflow
+# - Chooses from multiple contexts
+# - Gives choice to copy multi-line pwd, first line is hidden but all other lines are printed to dmenu
+
+ctx=$(ls $PASSWORD_STORE_HOME | sed 's/ /\n/g' | dmenu -i -p 'Pass context: ')
+if [$ctx = '']; then
+	exit 0
+fi;
+ctx_dir="${PASSWORD_STORE_HOME}/${ctx}"
+cd $ctx_dir
+
+# Pipe password files into dmenu
+pwd_file=$(find * | grep -i ".gpg" | sed "s/.gpg//g" | dmenu -i -l 10)
+if [$pwd_file = '']; then
+	exit 0
+fi;
+
+# Given a password file, list contents of file except for hidden password
+to_clip=$(PASSWORD_STORE_DIR=$ctx_dir pass "$pwd_file" | sed '1s/.*/<PASSWORD>/' | dmenu -i -p "Clip from ${pwd_file}:" -l 4)
+if [$to_clip = '']; then
+	exit 0
+fi;
+# Copy info or password to clipboard
+if [ "$to_clip" = "<PASSWORD>" ]; then
+	PASSWORD_STORE_DIR=$ctx_dir pass -c "$pwd_file"
+else
+	echo "$to_clip" | cut -d= -f2 | xclip -select clipboard
+fi;

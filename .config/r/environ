@@ -1,0 +1,4 @@
+R_HOME_USER = ${HOME}/workspaces/r
+R_PROFILE_USER = ${HOME}/.config/r/profile
+R_LIBS_USER = ${XDG_DATA_HOME}/r/library
+R_HISTFILE = ${HOME}/workspaces/r/.history

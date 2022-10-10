@@ -52,3 +52,8 @@ alias \
 	magit="nvim -c MagitOnly" \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
+	expose="bash ${XDG_DATA_HOME:-$HOME/.local/share}/Expose/expose.sh" \
+	darkhttpd="$HOME/.local/src/darkhttpd/darkhttpd"
+# Uncomment to use pass context aliases
+# There's probably a better way to do this but xargs did not work
+for n in $(basename -a $PASSWORD_STORE_HOME/*/); do alias "pass-$n"="PASSWORD_STORE_DIR=$PASSWORD_STORE_HOME/$n pass";done
