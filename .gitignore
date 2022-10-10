@@ -13,6 +13,9 @@
 # whitelist all of config
 !/.config
 !/.config/*
+# except these disgusting progs that
+# dump data into config
+/.config/BraveSoftware/
 
 # whitelist /.local and blacklist it's contents
 !/.local
