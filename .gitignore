@@ -10,12 +10,53 @@
 !/gtkrc-2.0
 !/.gitmodules
 
-# whitelist all of config
+# whitelist known config
 !/.config
-!/.config/*
-# except these disgusting progs that
-# dump data into config
-/.config/BraveSoftware/
+/.config/*
+# allow these
+!/.conf/dunst/dunstrc
+!/.conf/fontconfig/fonts.conf
+!/.conf/gtk-2.0/gtkrc-2.0
+!/.conf/gtk-3.0/settings.ini
+!/.conf/lf/cleaner
+!/.conf/lf/icons
+!/.conf/lf/lfrc
+!/.conf/lf/scope
+!/.conf/mimeapps.list
+!/.conf/mpd/mpd.conf
+!/.conf/mpv/input.conf
+!/.conf/mpv/scripts/modules.lua
+!/.conf/ncmpcpp/bindings
+!/.conf/ncmpcpp/config
+!/.conf/newsboat/config
+!/.conf/newsboat/urls
+!/.conf/nvim/init.vim
+!/.conf/pinentry/preexec
+!/.conf/pipewire/pipewire.conf
+!/.conf/pulse/daemon.conf
+!/.conf/r/profile
+!/.conf/r/environ
+!/.conf/redshift/redshift.conf
+!/.conf/shell/bm-dirs
+!/.conf/shell/bm-files
+!/.conf/shell/inputrc
+!/.conf/shell/aliasrc
+!/.conf/shell/profile
+!/.conf/sxiv/exec/key-handler
+!/.conf/systemd/user/redshift.service.d/display.conf
+!/.conf/systemd/user/geoclue-agent.service
+!/.conf/taskwarrior/.taskrc
+!/.conf/user-dirs.dirs
+!/.conf/wal/postrun
+!/.conf/wal/templates/dunstrc
+!/.conf/wal/templates/zathurarc
+!/.conf/wget/wgetrc
+!/.conf/x11/xinitrc
+!/.conf/x11/xprofile
+!/.conf/x11/xresources
+!/.conf/zathura/zathurarc
+!/.conf/zsh/.zshrc
+
 
 # whitelist /.local and blacklist it's contents
 !/.local
