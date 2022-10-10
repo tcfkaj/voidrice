@@ -24,8 +24,6 @@
 /.local/bin/__pycache__/
 
 # blacklist all of /.local/share except needed files
-!/.local/share
-/.local/share/*
 !/.local/share/applications
 !/.local/share/applications/*
 !/.local/share/larbs
