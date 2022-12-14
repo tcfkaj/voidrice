@@ -62,10 +62,11 @@
 !/.local
 /.local/*
 
-# whitelist /.local/bin except pycache
+# whitelist /.local/bin except pycache and installed
 !/.local/bin
 !/.local/bin/*
 /.local/bin/__pycache__/
+/.local/bin/installed/
 
 # blacklist all of /.local/share except needed files
 !/.local/share/applications
