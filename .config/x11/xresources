@@ -1,10 +1,11 @@
 !! Set dpi for high-dpi displays
-Xft.dpi: 288
+Xft.dpi: 192
 
 !! Transparency (0-1):
 *.alpha: 0.93
 
 !! Set a default font and font size as below:
+!! This affects all x progs - still set st, dwm, dwmblocks in config.h
 *.font: monospace:size=10
 
 /* name		dark	light */
